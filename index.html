@@ -6,8 +6,8 @@
     Дата рождения: <input type = "text" name="data"><br><br>
     Номер зачетки: <input type = "text" name="zach"><br><br>
     <b>Пол:</b>
-      <br><input type= "radio" name = "pol" id= "pol" value= "Female">Женский<br>
-      <input type= "radio" name="pol" id= "pol" value= "Male" checked>Мужской<br><br>
+      <br><input type= "radio" name = "pol" id= "sex" value= "Female">Женский<br>
+      <input type= "radio" name="pol" id= "sex" value= "Male" checked>Мужской<br><br>
     Email: <input type = "text" name="email"><br><br>
     Оценка: <select name= "o" size= "1" ><br>
         <option selected value= "otl" >Отлично</option>
@@ -22,7 +22,7 @@
           fio = person.fio.value
           data = person.data.value
           zach = person.zach.value
-          pol = document.getElementById('pol').value
+          pol = document.getElementById('sex').value
           email = person.email.value
           o = person.o.value
           S = "<table border=1><tr><th>FIO</th><th>Data_r</th><th>№_zachet</th><th>Email</th><th>Ozenka</th></tr>"
