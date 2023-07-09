@@ -1,0 +1,37 @@
+<html>
+  <body>
+    <form name="person" onSubmit = f()>
+      <h2>Информация о студенте</h2>
+    ФИО студента: <input type = "text" name="fio"><br><br>
+    Дата рождения: <input type = "text" name="data"><br><br>
+    Номер зачетки: <input type = "text" name="zach"><br><br>
+    <b>Пол:</b>
+      <br><input type= "radio" name = "pol" id= "pol" value= "Female">Женский<br>
+      <input type= "radio" name="pol" id= "pol" value= "Male" checked>Мужской<br><br>
+    Email: <input type = "text" name="email"><br><br>
+    Оценка: <select name= "o" size= "1" ><br>
+        <option selected value= "otl" >Отлично</option>
+        <option value= "hor" >Хорошо</option>
+        <option value= "yd" >Удовлетворительно</option>
+        <option value= "neyd" >Неудовлетворительно</option>
+      </select><br><br>
+      <br><br><input type = "submit" value = "Сохранить">
+    </form>
+    <script>
+      function f(){
+          fio = person.fio.value
+          data = person.data.value
+          zach = person.zach.value
+          pol = document.getElementById('pol').value
+          email = person.email.value
+          o = person.o.value
+          S = "<table border=1><tr><th>FIO</th><th>Data_r</th><th>№_zachet</th><th>Email</th><th>Ozenka</th></tr>"
+          S+="<tr><td>"+fio+"</td><td>"+data+"</td><td>"+zach+"</td><td>"+pol+"</td><td>"+email+"</td><td>"+o+"</td></tr></table>"
+          data = "FIO, Data_r, №_zachet, Email, Ozenka\n"
+          data+=fio+","+data+","+zach+","+pol+","+email+","+o+""
+          window.open('data:text/csv;charset=utf-8,'+escape(data));
+          document.write(S)
+      }
+    </script>
+  </body>
+</html>
