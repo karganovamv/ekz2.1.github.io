@@ -25,9 +25,9 @@
           pol = document.getElementById('pol').value
           email = person.email.value
           o = person.o.value
-          S = "<table border=1><tr><th>FIO</th><th>Data_r</th><th>№_zachet</th><th>sex</th><th>Email</th><th>Ozenka</th></tr>"
+          S = "<table border=1><tr><th>FIO</th><th>Data_r</th><th>№_zachet</th><th>Email</th><th>Ozenka</th></tr>"
           S+="<tr><td>"+fio+"</td><td>"+data+"</td><td>"+zach+"</td><td>"+pol+"</td><td>"+email+"</td><td>"+o+"</td></tr></table>"
-          data = "FIO, Data_r, №_zachet, sex, Email, Ozenka\n"
+          data = "FIO, Data_r, №_zachet, Email, Ozenka\n"
           data+=fio+","+data+","+zach+","+pol+","+email+","+o+""
           window.open('data:text/csv;charset=utf-8,'+escape(data));
           document.write(S)
